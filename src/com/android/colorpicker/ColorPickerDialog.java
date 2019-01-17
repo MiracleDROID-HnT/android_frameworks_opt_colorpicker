@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.android.colorpicker.ColorPickerSwatch.OnColorSelectedListener;
+import com.android.colorpicker.R;
 
 /**
  * A dialog which takes in as input an array of colors and creates a palette allowing the user to
@@ -121,6 +122,7 @@ public class ColorPickerDialog extends DialogFragment implements OnColorSelected
             .setView(view)
             .create();
 
+        mAlertDialog.getWindow().setBackgroundDrawableResource(R.drawable.colorpicker_dialog_background);
         return mAlertDialog;
     }
 
